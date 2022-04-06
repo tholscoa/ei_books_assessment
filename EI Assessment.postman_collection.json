@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "6b70f246-2ba6-420c-8144-1bb9672957b4",
+		"name": "EI Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get book from external source",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/external-books?name=A Game of Thrones",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"external-books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "A Game of Thrones"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new book in local DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Host",
+							"type": "text"
+						},
+						{
+							"key": "isbn",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Nigeria",
+							"type": "text"
+						},
+						{
+							"key": "number_of_pages",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "Reetos",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "02-03-2022",
+							"type": "text"
+						},
+						{
+							"key": "authors[0]",
+							"value": "Tolu\n",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "authors[1]",
+							"value": "Isaac",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "authors[2]",
+							"value": "Pat",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/books/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "haha",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update existing book record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Host",
+							"type": "text"
+						},
+						{
+							"key": "isbn",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Nigeria",
+							"type": "text"
+						},
+						{
+							"key": "number_of_pages",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "Reetos",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "02-03-2022",
+							"type": "text"
+						},
+						{
+							"key": "authors[0]",
+							"value": "Tolu\n",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "authors[1]",
+							"value": "Isaac",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "authors[2]",
+							"value": "Pat",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/books/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "haha",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all local DB books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "My book 1",
+							"type": "text"
+						},
+						{
+							"key": "isbn",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Nigeria",
+							"type": "text"
+						},
+						{
+							"key": "number_of_pages",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "Reetos",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "02-03-2022",
+							"type": "text"
+						},
+						{
+							"key": "authors[0]",
+							"value": "Tolu\n",
+							"type": "text"
+						},
+						{
+							"key": "authors[1]",
+							"value": "Isaac",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a specic Book from local DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "My book 1",
+							"type": "text"
+						},
+						{
+							"key": "isbn",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Nigeria",
+							"type": "text"
+						},
+						{
+							"key": "number_of_pages",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "Reetos",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "02-03-2022",
+							"type": "text"
+						},
+						{
+							"key": "authors[0]",
+							"value": "Tolu\n",
+							"type": "text"
+						},
+						{
+							"key": "authors[1]",
+							"value": "Isaac",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show a specific book with ID from local DB",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
